@@ -1,42 +1,74 @@
 ﻿using System;
 
-namespace MediaGeralPoo
+namespace LanchoneteMaia
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
-            Console.Title = "### Média Geral dos Alunos ###";
+            double total = 0;
 
-            Console.Write("Quantos Alunos ? ");
-            int nalunos = int.Parse(Console.ReadLine());
-     
-            Aluno[] alunos = new Aluno[nalunos];//Aluno é o tipo do Array ; nalunos é o tamanho do Array;
+            Console.Title = "Lanchonete Maia";
 
-            for (int i = 0; i < alunos.Length; i++)
+            Console.WriteLine("Quantos pedidos deseja fazer ? ");
+            int qnt = int.Parse(Console.ReadLine());
+
+
+            for (int i = 0; i < qnt; i++)
             {
+                Console.WriteLine("+++++ Opções de Lanches +++++");
+                Console.WriteLine("[1] Dogão Simples R$ 6,25 ");
+                Console.WriteLine("[2] Dogão Duplo R$ 6,75 ");
+                Console.WriteLine("[3] X-Salada R$ 10,75 ");
+                Console.WriteLine("[4] X-Egg R$ 11,75 ");
+                Console.WriteLine("[5] X-Bacon R$ 13,50 ");
+                int codigo = int.Parse(Console.ReadLine());
+
+                double pedido = 0;
+                switch (codigo)
+                {
+                    case 1:
+                        pedido = 6.25;
+                        break;
+
+                    case 2:
+                        pedido = 6.75;
+                        break;
+                    case 3:
+                        pedido = 10.75;
+                        break;
+                    case 4:
+                        pedido = 11.75;
+                        break;
+                    case 5:
+                        pedido = 13.50;
+                        break;
+                }
+
+                total = pedido;
+
+
                 Console.Clear();
+  
 
-                Console.Write("Aluno # : " + ( i + 1) + " Nome.. ");
-                string nome = Console.ReadLine();
-
-                Console.Write("Aluno # : " + (i + 1) + " Provas.. "); 
-                int provas = int.Parse(Console.ReadLine());
-
-                alunos[i] = new Aluno(nome, provas);
-
-                Console.Write("Insira as notas do aluno " + nome);
-                alunos[i].InserirNotas();
             }
 
+            total += total;
+
+            Console.WriteLine("Pedido Finalizado.");
+            Console.WriteLine("Valor total a pagar é de R$ " + total);
 
 
 
+            Console.Read();
 
+            
 
-
-
-
+           
+            
+            
 
 
         }
