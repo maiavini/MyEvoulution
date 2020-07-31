@@ -1,0 +1,44 @@
+using System;
+
+namespace Apreneno_CSharp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Tipos de Triângulo");
+
+            double ladoA = 30;
+            double ladoB = 0.1;
+            double ladoC = 20.5;
+
+            if (ladoA == 0 || ladoB == 0 || ladoC == 0)
+            {
+                Console.WriteLine("ERRO! Nenhum lado pode ser igual zero");
+            }
+            else
+            {
+
+                if (ladoA == ladoB && ladoA == ladoC && ladoC == ladoB)
+                {
+                    Console.WriteLine("Este é um triângulo EQUILATERO");
+                }
+                else
+                {
+                    if (ladoA == ladoB || ladoA == ladoC || ladoC == ladoB)
+                    {
+                        Console.WriteLine("Este é um triângulo ISÓSCELES");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Este é um triângulo ESCALENO");
+
+                    }
+
+                }
+            }
+
+
+        }
+    }
+}
