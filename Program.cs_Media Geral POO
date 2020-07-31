@@ -28,6 +28,25 @@ namespace MediaGeralPoo
                 Console.Write("Insira as notas do aluno " + nome);
                 alunos[i].InserirNotas();
             }
+            
+            Console.Clear();
+
+            double mediaGeral = 0;
+
+            foreach (Aluno aluno in alunos)
+            {
+                Console.WriteLine("Aluno: " + aluno.Nome);
+                Console.WriteLine("Media : " + aluno.Media);
+                Console.WriteLine();
+
+                mediaGeral = +aluno.Media;
+            }
+
+            double resultadoFinal = mediaGeral / alunos.Length;
+
+            Console.WriteLine("Media Geral dos Alunos: " + resultadoFinal);
+
+            Console.ReadKey();
 
 
 
