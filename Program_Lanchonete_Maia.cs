@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace LanchoneteMaia
 {
@@ -9,6 +9,9 @@ namespace LanchoneteMaia
         static void Main(string[] args)
         {
             double total = 0;
+            double pedido = 0;
+            double totalPg = 0;
+            
 
             Console.Title = "Lanchonete Maia";
 
@@ -26,11 +29,15 @@ namespace LanchoneteMaia
                 Console.WriteLine("[5] X-Bacon R$ 13,50 ");
                 int codigo = int.Parse(Console.ReadLine());
 
-                double pedido = 0;
+                
+                
                 switch (codigo)
                 {
                     case 1:
                         pedido = 6.25;
+                        desc = "Dogão Simples";
+
+
                         break;
 
                     case 2:
@@ -55,10 +62,10 @@ namespace LanchoneteMaia
 
             }
 
-            total += total;
+             totalPg += total;
 
             Console.WriteLine("Pedido Finalizado.");
-            Console.WriteLine("Valor total a pagar é de R$ " + total);
+            Console.WriteLine("Valor total a pagar é de R$ " + totalPg);
 
 
 
