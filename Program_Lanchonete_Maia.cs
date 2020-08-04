@@ -54,7 +54,7 @@ namespace LanchoneteMaia
                         break;
                 }
 
-                total = pedido;
+                total += pedido;
 
 
                 Console.Clear();
@@ -62,7 +62,7 @@ namespace LanchoneteMaia
 
             }
 
-             totalPg += total;
+             totalPg = total;
 
             Console.WriteLine("Pedido Finalizado.");
             Console.WriteLine("Valor total a pagar é de R$ " + totalPg);
