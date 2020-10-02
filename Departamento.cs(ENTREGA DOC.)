@@ -6,9 +6,9 @@ namespace Entrega_Doc
 {
     class Departamento
     {
-        public string Setor  { get; set; }
-        public string Colaborador { get; set; }
-        public Cliente Protocolo { get; set; }
+        private string Setor  { get; set; }
+        private string Colaborador { get; set; }
+        private Cliente Protocolo { get; set; }
 
         public Departamento (string setor, string colaborador)
         {
